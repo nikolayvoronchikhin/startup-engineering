@@ -1,0 +1,149 @@
+Startup Engineering 2013:
+
+Google Chrome
+Cygwin (Windows), Command Line Interface
+Amazon Web Services cloud instance: t1.micro VM (FREE)
+AWS EC2 Security Groups, AWS Infrastructure Services
+EC2: Virtual Server in the Cloud
+ec2-54-215-181-126.us-west-1.compute.amazonaws.com
+
+New Standard Environment: Ubuntu 12.04.2 LTS on AWS EC2
+Github: clone code from github.com/heroku/node-js-sample
+Heroku: create new Heroku web app
+Gravatar: all your websites
+
+Linux System Administration, Linux Command Line
+Node.js app deployment
+Install node.js, npm
+SSH, SCP, File system, PATH issues, Env, Home, PATH, Linux, The Cloud (IAAS/PAAS/SAAS), Virtual Machines, 
+Basic Bash, Shell Scripting
+Nano Linux Text Editor
+
+Node programs
+
+Target App for Mobile HTML5!!!
+
+Cygwin:
+ls -alrth
+chmod 400: read only by me
+chgrp: change group
+cp file . : copy file to current directory
+
+Ubuntu:
+hostname: lists host
+wget/apt-get: get application
+which: checks path of application
+
+Terminate EC2 instance when done.
+
+ubuntu@ip-172-31-11-90
+e4:12:ab:ec:e9:06:53:82:a5:77:22:e3:d5:ca:10:6e
+
+Deploy code to Heroku: git push heroku master
+Push code to Github: git push origin master
+Pull code from Github: git pull --rebase
+
+Development, Staging, Production Branch before pushing to the web!
+
+Learned:
+git, Github, AWS, Heroku, Gravatar, EC2, Virtual Machine, AMI, Availability Zone, EC2 instance, IP address, Hostname, DNS
+SSH, Public Key, RSA
+
+
+SSJS: Server-Side JavaScript
+Command line interface. Ubuntu (Linux).
+Linux: free, open-source. no license fees. 
+Windows/OS X Client, Linux Server.
+Android. 
+
+Virtual Machines like VMware: separate Applications for everything, save space. 
+Virtualization: allow Amazon to provision machines to wipe and reboot without affecting underlying hardware.
+
+The Cloud: IAAS/PAAS/SAAS
+IAAS (direct control of command line, no GUI)
+PAAS (API, fewer commands)
+SAAS (solely API or GUI, no direct control)
+
+IAAS: AWS, Joyent, Rackspace Cloud
+PAAS: Heroku, DotCloud, Nodester, Google AppEngine
+SAAS: Salesforce, Google Apps, Mint.com
+
+Linux Basics, BASH:
+File system:
+cd $HOME # chanve to your home directory
+pwd # print working directory
+mkdir mydir #make a new directory called mydir
+cd mydir
+pwd # now you are in ~/mydir
+touch myfile #create a blank file called myfile
+ls -alrth myfile # list metadata
+alias ll='ls -alrth #set up an alias to save typing
+ll myfile
+echo "line1" >> myfile # append via '>>' to a file
+cat myfile
+cd ..
+cp mydir/myfile myfle2 #copy file into new file
+rm -i myfile2 #interactive remove
+cp -av mydir newdir #av flag 'archives' the directory, copying timestamps 
+rm -rf mydir #very dangerous remove recursively
+mv myfile myfile-renamed #mv doubles as a rename
+rm myfile-*
+
+env #lists all environmental variables
+PATH #echo $PATH
+HOME # cd ~
+
+debugging PATH issues with which command
+restore path: export PATH
+which -a git #all git
+
+SSH:
+ssh -i #interactive ssh
+$uptime
+
+mkdir -p ~/.ssh
+cp ~/downloads/skey.pem ~/.ssh/
+chmod 400 ~/.ssh/skey.pem
+chmod 700 ~/.ssh
+nano ~/.ssh/config
+cat ~/.ssh/config
+Host awshost1
+Hostname
+User ubuntu
+IdentityFile "~/ssh/skey.pem"
+
+Now: ssh awshost1 uptime
+
+
+SCP:
+scp hello.txt awshost1:~/
+scp awshost1:~/foo.txt
+
+Bash: Command interpreter
+#!/bin/bash
+date
+echo "Good morning, world!"
+
+chmod 777 simple.sh
+./simple.sh
+
+Server Side JavaScript:
+apt-get program to install node.js and npm
+
+$ nano hello.js
+
+Hello.js:
+#!/usr/bin/env node
+console.log("Hello World!");
+
+$ node hello.js
+
+STDIN
+STDOUT
+STDERR
+
+echo #write to file
+curl #write message
+curl -s google.com | head -n 2 &> asdf.txt
+
+
